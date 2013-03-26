@@ -40,34 +40,34 @@ public class CadUnidade extends CRUDSemPesquisa<Unidade> {
         }
     }
 
-    public void disponibilizarMaterial() throws Exception {
+    public String disponibilizarMaterial() throws Exception {
         novo();
         setSelecUnidade(new Unidade());
         this.ocorrenciasUnidade = new ArrayList<Ocorrencia>();
         this.unidadesCoordenador = LoManListener.getDAOFactory().getUnidadeDAO().buscarUnidadesPorCoordenador(AutenticacaoUtil.getInstance().getUsuarioSessao());
         this.unidadesConcluidas = LoManListener.getDAOFactory().getUnidadeDAO().buscarUnidadesComTarefasConcluidas(AutenticacaoUtil.getInstance().getUsuarioSessao());
         this.unidadeDesabilitado = true;
-        FacesContext.getCurrentInstance().getExternalContext().redirect("/loman/disponibilizarunidadecad.jsf");        
+        return "disponibilizarunidadecad";        
     }
 
-    public void revisarUnidade() throws Exception {
+    public String revisarUnidade() throws Exception {
         novo();
         setSelecUnidade(new Unidade());
         this.ocorrenciasUnidade = new ArrayList<Ocorrencia>();
         this.unidadesConcluidas = LoManListener.getDAOFactory().getUnidadeDAO().buscarUnidadesComTarefasConcluidas(AutenticacaoUtil.getInstance().getUsuarioSessao());
         this.unidadesProntasParaRevisao = LoManListener.getDAOFactory().getUnidadeDAO().buscarUnidadesProntasParaRevisao(AutenticacaoUtil.getInstance().getUsuarioSessao());
         this.unidadeDesabilitado = true;
-        FacesContext.getCurrentInstance().getExternalContext().redirect("/loman/revisarunidadecad.jsf");        
+        return "revisarunidadecad";        
     }
 
-    public void tramitarUnidade() throws Exception {
+    public String tramitarUnidade() throws Exception {
         novo();
         setSelecUnidade(new Unidade());
         this.ocorrenciasUnidade = new ArrayList<Ocorrencia>();
         this.unidadesConcluidas = LoManListener.getDAOFactory().getUnidadeDAO().buscarUnidadesComTarefasConcluidas(AutenticacaoUtil.getInstance().getUsuarioSessao());
         this.unidadesProntasParaRevisao = LoManListener.getDAOFactory().getUnidadeDAO().buscarUnidadesProntasParaRevisao(AutenticacaoUtil.getInstance().getUsuarioSessao());
         this.unidadeDesabilitado = true;
-        FacesContext.getCurrentInstance().getExternalContext().redirect("/loman/tramitarunidadecad.jsf");        
+        return "tramitarunidadecad";        
     }   
 
     public void setarOcorrenciasUnidadeComMaterial() throws Exception {

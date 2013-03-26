@@ -52,24 +52,24 @@ public class CadRoteiro extends CRUDSemPesquisa<Roteiro> {
         }
     }
 
-    public void novoRoteiro() throws Exception {
+    public String novoRoteiro() throws Exception {
         novo();
         novaTarefa();
         setSelecUnidade(new Unidade());
         slideDesabilitado = true;
-        FacesContext.getCurrentInstance().getExternalContext().redirect("/loman/roteiroscad.jsf");
+        return "roteiroscad";
     }
 
-    public void verificarRevisoesUnidade() throws Exception {
+    public String verificarRevisoesUnidade() throws Exception {
         novo();
         setSelecUnidade(new Unidade());
         this.unidadeDesabilitado = true;
         this.unidadesComProblemas = cruc.buscarUnidadesComProblemas(AutenticacaoUtil.getInstance().getUsuarioSessao());
-        FacesContext.getCurrentInstance().getExternalContext().redirect("/loman/verificarrevisoesunidadecad.jsf");
+        return "verificarrevisoesunidadecad";
     }
 
-    public void testeMindMap() throws IOException {
-        FacesContext.getCurrentInstance().getExternalContext().redirect("/loman/roteiromapaconceitual.jsf");
+    public String testeMindMap() throws IOException {
+        return "roteiromapaconceitual";
     }
     private List<Conteudo> conteudos = new ArrayList<Conteudo>();
 

@@ -117,9 +117,9 @@ public class CadUsuario extends CRUD<Usuario, String> {
         setSenha2("");
     }
 
-    public void novoUsuario() throws Exception {
+    public String novoUsuario() throws Exception {
         novo();
-        FacesContext.getCurrentInstance().getExternalContext().redirect("/loman/usuarioscad.jsf");        
+        return "usuarioscad";        
     }
 
     @Override
@@ -142,8 +142,8 @@ public class CadUsuario extends CRUD<Usuario, String> {
         return "login";
     }
 
-    public void logout() throws IOException {
+    public String logout() throws IOException {
         AutenticacaoUtil.getInstance().destroiHttpSession();
-        FacesContext.getCurrentInstance().getExternalContext().redirect("/loman/login.jsf");        
+        return "login";        
     }
 }

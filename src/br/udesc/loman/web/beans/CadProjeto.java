@@ -37,11 +37,11 @@ public class CadProjeto extends CRUD<Projeto, String>{
         return usuarios;
     }
 
-    public void novoProjeto() throws Exception {
+    public String novoProjeto() throws Exception {
         novo();
         membro = null;
         unidade = null;
-        FacesContext.getCurrentInstance().getExternalContext().redirect("/loman/projetoscad.jsf");        
+        return "projetoscad";
     }
 
     @Override

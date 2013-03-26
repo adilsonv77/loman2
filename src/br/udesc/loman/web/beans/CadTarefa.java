@@ -40,42 +40,42 @@ public class CadTarefa extends CRUDSemPesquisa<Tarefa>{
         }
     }
 
-    public void assumirTarefa() throws Exception {
+    public String assumirTarefa() throws Exception {
         novo();
         setSelecTarefa(new Tarefa());
         this.tarefasAssumidas = LoManListener.getDAOFactory().getTarefaDAO().buscaTarefasAssumidas(AutenticacaoUtil.getInstance().getUsuarioSessao());
         this.tarefasDisponiveis = LoManListener.getDAOFactory().getTarefaDAO().buscaTarefasDisponiveis(AutenticacaoUtil.getInstance().getUsuarioSessao());
         this.ocorrenciasTarefa = new ArrayList<Ocorrencia>();
         this.tarefaDesabilitado = true;
-        FacesContext.getCurrentInstance().getExternalContext().redirect("/loman/assumirtarefacad.jsf");        
+        return "assumirtarefacad";        
     }
 
-    public void disponibilizarMaterial() throws Exception {
+    public String disponibilizarMaterial() throws Exception {
         novo();
         setSelecTarefa(new Tarefa());
         this.tarefasAssumidas = LoManListener.getDAOFactory().getTarefaDAO().buscaTarefasAssumidas(AutenticacaoUtil.getInstance().getUsuarioSessao());
         this.ocorrenciasTarefa = new ArrayList<Ocorrencia>();
         this.tarefaDesabilitado = true;
-        FacesContext.getCurrentInstance().getExternalContext().redirect("/loman/disponibilizarmaterialcad.jsf");        
+        return "disponibilizarmaterialcad";        
     }
 
-    public void revisarTarefa() throws Exception {
+    public String revisarTarefa() throws Exception {
         novo();
         this.tarefa = new Tarefa();
         this.ocorrenciasTarefa = new ArrayList<Ocorrencia>();
         this.tarefasProntasParaRevisao = LoManListener.getDAOFactory().getTarefaDAO().buscaTarefasProntasParaRevisao(AutenticacaoUtil.getInstance().getUsuarioSessao());
         this.tarefaDesabilitado = true;
-        FacesContext.getCurrentInstance().getExternalContext().redirect("/loman/revisartarefacad.jsf");        
+        return "revisartarefacad";        
     }
     
-    public void tramitarTarefa() throws Exception {
+    public String tramitarTarefa() throws Exception {
         novo();
         this.tarefa = new Tarefa();
         this.ocorrenciasTarefa = new ArrayList<Ocorrencia>();
         this.tarefasProntasParaRevisao = LoManListener.getDAOFactory().getTarefaDAO().buscaTarefasProntasParaRevisao(AutenticacaoUtil.getInstance().getUsuarioSessao());
         this.tarefaDesabilitado = true;
         this.copiaStatus = Status.CONCLUIDA;
-        FacesContext.getCurrentInstance().getExternalContext().redirect("/loman/tramitartarefacad.jsf");        
+        return "tramitartarefacad";        
     }
     /**
      * *******************************
