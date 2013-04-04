@@ -142,8 +142,8 @@ public class CadUsuario extends CRUD<Usuario, String> {
         return "login";
     }
 
-    public String logout() throws IOException {
+    public void logout() throws IOException {
         AutenticacaoUtil.getInstance().destroiHttpSession();
-        return "login";        
+        FacesContext.getCurrentInstance().getExternalContext().redirect("login.jsf");        
     }
 }

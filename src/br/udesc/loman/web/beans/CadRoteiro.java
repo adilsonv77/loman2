@@ -338,6 +338,7 @@ public class CadRoteiro extends CRUDSemPesquisa<Roteiro> {
     }
 
     public void addSlide() throws Exception {
+    	System.out.println("addSlide");
         if (getSelecSlide().getTitulo().trim().equals("")) {
             mensagem(FacesMessage.SEVERITY_ERROR, "Titulo", "Campo tÃ­tulo Ã© obrigatÃ³rio!");
         } else {

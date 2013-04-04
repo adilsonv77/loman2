@@ -25,6 +25,7 @@ public class AutenticacaoUtil implements AutenticacaoControle {
     }
 
     public void destroiHttpSession(){
+  
         HttpSession session = (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(false);
         session.invalidate();
     }

@@ -25,7 +25,7 @@
                 <p:menuitem ajax="false" value="#{msg.proceedingUnits}" action="#{cadUnidade.tramitarUnidade()}" rendered="#{cadUsuario.verificarUsuarioProfessorConteudista()}"/>
                 <p:menuitem ajax="false" value="#{msg.checkReviewUnit}" action="#{cadRoteiro.verificarRevisoesUnidade()}" rendered="#{cadUsuario.verificarUsuarioCoordenador()}"/>
             </p:submenu>
-            <p:menuitem ajax="false" value="#{msg.logout}" action="#{cadUsuario.logout()}" icon="ui-icon ui-icon-power" />            
+            <p:menuitem ajax="false" value="#{msg.logout}" actionListener="#{cadUsuario.logout()}" icon="ui-icon ui-icon-power" />            
 <!--            <p:menuitem ajax="false" value="TESTE MINDMAP" action="#{cadRoteiro.testeMindMap()}" />      -->
         </p:menubar>
 

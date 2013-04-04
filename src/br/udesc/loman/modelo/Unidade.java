@@ -96,7 +96,7 @@ public class Unidade implements Serializable, TemGetId {
     private Projeto projeto;    
     
     @OneToOne(mappedBy = "unidade", cascade = CascadeType.ALL)        
-    private Roteiro roteiro = new Roteiro();
+    private Roteiro roteiro;
     
     @OneToMany(mappedBy = "unidade", cascade = CascadeType.ALL)
     private List<Ocorrencia> ocorrencias = new ArrayList<Ocorrencia>();

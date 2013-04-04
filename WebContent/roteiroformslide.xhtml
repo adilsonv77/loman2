@@ -26,7 +26,7 @@
                     <p:commandButton id="addSlide" 
                                      value="#{msg.add}"                                       
                                      rendered="#{cadRoteiro.alterandoSlide == false}"
-                                     action="#{cadRoteiro.addSlide()}"
+                                     actionListener="#{cadRoteiro.addSlide()}"
                                      update=":tabUnidadeSlideTarefa:formCadastroSlide
                                      :tabUnidadeSlideTarefa:formTabelaSlides
                                      :messages">                                            
@@ -34,7 +34,7 @@
                     <p:commandButton id="alterSlide" 
                                      value="#{msg.alter}"                        
                                      rendered="#{cadRoteiro.alterandoSlide == true}"
-                                     action="#{cadRoteiro.alterarSlide()}"
+                                     actionListener="#{cadRoteiro.alterarSlide()}"
                                      update=":tabUnidadeSlideTarefa:formCadastroSlide
                                      :tabUnidadeSlideTarefa:formTabelaSlides
                                      :messages">                    
