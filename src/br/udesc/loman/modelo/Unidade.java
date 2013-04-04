@@ -119,6 +119,7 @@ public class Unidade implements Serializable, TemGetId {
     public Unidade() {
         super();
         this.roteiro = new Roteiro();
+        this.roteiro.setUnidade(this);
     }
 
     public Roteiro getRoteiro() {
