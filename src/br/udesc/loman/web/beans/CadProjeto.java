@@ -99,6 +99,7 @@ public class CadProjeto extends CRUD<Projeto, String>{
 
     public void updateMember() {
         this.membro = null;
+        mensagem(FacesMessage.SEVERITY_INFO, "Sucesso", "Usuário alterado.");
     }
 
     public MembroEquipe getSelecMembro() {

@@ -33,9 +33,10 @@
                              value="#{msg.add}"
                              rendered="#{cadProjeto.membro.projeto == null}"/>
             <p:commandButton actionListener="#{cadProjeto.updateMember()}" 
-                             update=":formCadastroProjetos:tabEquipeMatrizDI" 
+                             update=":formCadastroProjetos:tabEquipeMatrizDI :messages" 
                              value="#{msg.alter}"
-                             rendered="#{cadProjeto.membro.projeto != null}"/>
+                             rendered="#{cadProjeto.membro.projeto != null}"
+                             />
             <p:commandButton actionListener="#{cadProjeto.newMember()}" 
                              update=":formCadastroProjetos:tabEquipeMatrizDI" 
                              value="#{msg.newValue}"
