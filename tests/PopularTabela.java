@@ -43,9 +43,9 @@ public class PopularTabela extends javax.swing.JFrame {
 
     private void adicionarRegistros() throws Exception {
 
-        //INÍCIO DA INCLUSÃO DOS USUÁRIOS
+        //INICIO DA INCLUSÃO DOS USUÁRIOS
         Usuario usuarioJoaoPaulo = new Usuario();
-        usuarioJoaoPaulo.setNome("João Paulo");
+        usuarioJoaoPaulo.setNome("Joao Paulo");
         usuarioJoaoPaulo.setNick("JP");
         usuarioJoaoPaulo.setSenha("1234");
         usuarioJoaoPaulo.setEmail("joaodasilveira@gmail.com");
@@ -53,7 +53,7 @@ public class PopularTabela extends javax.swing.JFrame {
         cUsuario.salvar(usuarioJoaoPaulo);        
 
         Usuario usuarioMariaDaGloria = new Usuario();
-        usuarioMariaDaGloria.setNome("Maria da Glória");
+        usuarioMariaDaGloria.setNome("Maria da Gloria");
         usuarioMariaDaGloria.setNick("Maria");
         usuarioMariaDaGloria.setSenha("654321");
         usuarioMariaDaGloria.setEmail("mariadagloria@gmail.com");
@@ -77,7 +77,7 @@ public class PopularTabela extends javax.swing.JFrame {
         cUsuario.salvar(usuarioClaudioSouza);        
 
         Usuario usuarioJuliaPires = new Usuario();
-        usuarioJuliaPires.setNome("Júlia Pires");
+        usuarioJuliaPires.setNome("Julia Pires");
         usuarioJuliaPires.setNick("Julia");
         usuarioJuliaPires.setSenha("1234");
         usuarioJuliaPires.setEmail("juliapires@gmail.com");
@@ -101,24 +101,24 @@ public class PopularTabela extends javax.swing.JFrame {
         cUsuario.salvar(usuarioRafaelDeLima);        
 
         Usuario usuarioTulioMaravilha = new Usuario();
-        usuarioTulioMaravilha.setNome("Túlio Maravilha");
-        usuarioTulioMaravilha.setNick("Túlio");
+        usuarioTulioMaravilha.setNome("Tulio Maravilha");
+        usuarioTulioMaravilha.setNick("Tulio");
         usuarioTulioMaravilha.setSenha("1234");
         usuarioTulioMaravilha.setEmail("tuliomaravilha@gmail.com");
         usuarioTulioMaravilha.setAdministrador(true);
         cUsuario.salvar(usuarioTulioMaravilha);        
 
         Usuario usuarioFabioCorrea = new Usuario();
-        usuarioFabioCorrea.setNome("Fábio Correa");
-        usuarioFabioCorrea.setNick("Fábio");
+        usuarioFabioCorrea.setNome("Fabio Correa");
+        usuarioFabioCorrea.setNick("Fabio");
         usuarioFabioCorrea.setSenha("1234");
         usuarioFabioCorrea.setEmail("fabiolima@gmail.com");
         usuarioFabioCorrea.setAdministrador(false);
         cUsuario.salvar(usuarioFabioCorrea);        
 
         Usuario usuarioRomarioSilva = new Usuario();
-        usuarioRomarioSilva.setNome("Romário Silva");
-        usuarioRomarioSilva.setNick("Romário");
+        usuarioRomarioSilva.setNome("Romario Silva");
+        usuarioRomarioSilva.setNick("Romario");
         usuarioRomarioSilva.setSenha("1234");
         usuarioRomarioSilva.setEmail("romariosilva@gmail.com");
         usuarioRomarioSilva.setAdministrador(false);
@@ -203,48 +203,48 @@ public class PopularTabela extends javax.swing.JFrame {
         usuarioAdilsonVahldick.setEmail("adilsonvahldick@gmail.com");
         usuarioAdilsonVahldick.setAdministrador(true);
         cUsuario.salvar(usuarioAdilsonVahldick);        
-        //FIM DA INCLUSÃO DOS USUÁRIOS           
+        //FIM DA INCLUSÃO DOS USUARIOS           
 
-        //INICIO DA INCLUSAO DO PROJETO DE INICIAÇÃO CIENTÍFICA
+        //INICIO DA INCLUSAO DO PROJETO DE INICIACAO CIENTIFICA
         Projeto projetoFerramentaObjetoAprendizagem = new Projeto();
         projetoFerramentaObjetoAprendizagem.setTitulo("Projeto de Desenvolvimento de uma Ferramenta para Gerenciamento do Processo de Desenvolvimento de Objetos de Aprendizagem.");
         projetoFerramentaObjetoAprendizagem.setDataInicio(new java.util.Date());
-        projetoFerramentaObjetoAprendizagem.setDescricao("O projeto consiste em um projeto de Iniciação Científica.");
+        projetoFerramentaObjetoAprendizagem.setDescricao("O projeto consiste em um projeto de Iniciacao Cientifica.");
         projetoFerramentaObjetoAprendizagem.setCoordenador(usuarioAdilsonVahldick);
         
         //INICIO DA INCLUSAO DO PROJETO SOL MAIOR
         Projeto projetoSolMaior = new Projeto();
         projetoSolMaior.setTitulo("Projeto Sol Maior.");
         projetoSolMaior.setDataInicio(new java.util.Date());
-        projetoSolMaior.setDescricao("O projeto consiste em um projeto de extensão que pretende realizar eventos musicais na UDESC Ibirama e no município com o intuito de aproximar os acadêmicos e a comunidade da música enquanto modo de expressão e arte.");
+        projetoSolMaior.setDescricao("O projeto consiste em um projeto de extensao que pretende realizar eventos musicais na UDESC Ibirama e no municipio com o intuito de aproximar os academicos e a comunidade da musica enquanto modo de expressao e arte.");
         projetoSolMaior.setCoordenador(usuarioPabloSchoeffel);
         
-        //INICIO DA INCLUSAO DO PROJETO INCLUSÃO DIGITAL PARA IDOSOS
+        //INICIO DA INCLUSAO DO PROJETO INCLUSAO DIGITAL PARA IDOSOS
         Projeto projetoInclusaoDigitalParaIdosos = new Projeto();
-        projetoInclusaoDigitalParaIdosos.setTitulo("Projeto de Inclusão Digital para Idosos.");
+        projetoInclusaoDigitalParaIdosos.setTitulo("Projeto de Inclusao Digital para Idosos.");
         projetoInclusaoDigitalParaIdosos.setDataInicio(new java.util.Date());
-        projetoInclusaoDigitalParaIdosos.setDescricao("O projeto consiste em um projeto de extensão que pretende realizar aulas de informática básica para idosos da comunidade de Ibirama e região.");
+        projetoInclusaoDigitalParaIdosos.setDescricao("O projeto consiste em um projeto de extensao que pretende realizar aulas de informatica basica para idosos da comunidade de Ibirama e regiao.");
         projetoInclusaoDigitalParaIdosos.setCoordenador(usuarioGeraldoVarela);
         
-        //INICIO DA INCLUSAO DO PROJETO INCLUSÂO DIGITAL PARA ADOLESCENTES
+        //INICIO DA INCLUSAO DO PROJETO INCLUSAO DIGITAL PARA ADOLESCENTES
         Projeto projetoInclusaoDigitalParaAdolescentes = new Projeto();
-        projetoInclusaoDigitalParaAdolescentes.setTitulo("Projeto de Inclusão Digital para Adolescentes.");
+        projetoInclusaoDigitalParaAdolescentes.setTitulo("Projeto de Inclusao Digital para Adolescentes.");
         projetoInclusaoDigitalParaAdolescentes.setDataInicio(new java.util.Date());
-        projetoInclusaoDigitalParaAdolescentes.setDescricao("O projeto consiste em um projeto de extensão que pretende realizar aulas de informática básica para idosos da comunidade de Ibirama e região.");
+        projetoInclusaoDigitalParaAdolescentes.setDescricao("O projeto consiste em um projeto de extensao que pretende realizar aulas de informatica basica para idosos da comunidade de Ibirama e regiao.");
         projetoInclusaoDigitalParaAdolescentes.setCoordenador(usuarioGeraldoVarela);
         
-        //INICIO DA INCLUSAO DO PROJETO APRIMORAR MECANISMOS PARA COORDENACAO EM SISTEMAS MULTIAGENTE ATRAVÉS DO USO DE METÁFORAS DA INTELIÊNCIA DE ENXAMES
+        //INICIO DA INCLUSAO DO PROJETO APRIMORAR MECANISMOS PARA COORDENACAO EM SISTEMAS MULTIAGENTE ATRAVES DO USO DE METAFORAS DA INTELIGENCIA DE ENXAMES
         Projeto projetoAprimorarMecanismosParaCoordenacao = new Projeto();
-        projetoAprimorarMecanismosParaCoordenacao.setTitulo("Projeto Aprimorar Mecanismos para Coordenação em sistemas Multiagente Através do uso de Metáforas da Inteligência de Enxames.");
+        projetoAprimorarMecanismosParaCoordenacao.setTitulo("Projeto Aprimorar Mecanismos para Coordenacao em sistemas Multiagente Atraves do uso de Metaforas da Inteligencia de Enxames.");
         projetoAprimorarMecanismosParaCoordenacao.setDataInicio(new java.util.Date());
-        projetoAprimorarMecanismosParaCoordenacao.setDescricao("O projeto consiste em um projeto de Iniciação Científica.");
+        projetoAprimorarMecanismosParaCoordenacao.setDescricao("O projeto consiste em um projeto de Iniciacao Cientifica.");
         projetoAprimorarMecanismosParaCoordenacao.setCoordenador(usuarioFernandoSantos);
         
-        //INICIO DA INCLUSAO DO PROJETO MAPEAMENTO DE EMPRESAS DE DESENVOLVIMENTO DE SOFTWARE DO ALTO VALE DO ITAJAÍ
+        //INICIO DA INCLUSAO DO PROJETO MAPEAMENTO DE EMPRESAS DE DESENVOLVIMENTO DE SOFTWARE DO ALTO VALE DO ITAJAI
         Projeto projetoMapementoDeEmpresas = new Projeto();
-        projetoMapementoDeEmpresas.setTitulo("Projeto Mapeamento de Empresas de Desenvolvimento de Software do Alto Vale do Itajaí.");
+        projetoMapementoDeEmpresas.setTitulo("Projeto Mapeamento de Empresas de Desenvolvimento de Software do Alto Vale do Itajai.");
         projetoMapementoDeEmpresas.setDataInicio(new java.util.Date());
-        projetoMapementoDeEmpresas.setDescricao("O projeto consiste em um projeto de Iniciação Científica.");
+        projetoMapementoDeEmpresas.setDescricao("O projeto consiste em um projeto de Iniciacao Cientifica.");
         projetoMapementoDeEmpresas.setCoordenador(usuarioPabloSchoeffel);
         
         //MEMBROS PROJETO INICIACAO CIENTIFICA
@@ -417,7 +417,7 @@ public class PopularTabela extends javax.swing.JFrame {
         conteudos1.add(conteudo4);
                         
         Objetivo objetivo1 = new Objetivo();        
-        objetivo1.setDescricao("Concluir projeto até fim do ano de 2011");
+        objetivo1.setDescricao("Concluir projeto ate fim do ano de 2011");
         objetivo1.setUnidade(unidade1);
         
         Objetivo objetivo2 = new Objetivo();        
@@ -425,7 +425,7 @@ public class PopularTabela extends javax.swing.JFrame {
         objetivo2.setUnidade(unidade1);
         
         Objetivo objetivo3 = new Objetivo();        
-        objetivo3.setDescricao("Testar implementações");
+        objetivo3.setDescricao("Testar implementacoes");
         objetivo3.setUnidade(unidade1);
         
         objetivos1.add(objetivo1);
@@ -498,8 +498,8 @@ public class PopularTabela extends javax.swing.JFrame {
         unidade7.setRoteiro(roteiro7);
         
         Unidade unidade8 = new Unidade();
-        unidade8.setNome("Gerenciamento de Apresentações");
-        unidade8.setDescricao("Deve ser especificado todas as apresentações musicais.");        
+        unidade8.setNome("Gerenciamento de Apresentacoes");
+        unidade8.setDescricao("Deve ser especificado todas as apresentacoes musicais.");        
         unidade8.setProjeto(projetoSolMaior);
         unidade8.setDuracao(360);                
         
@@ -510,7 +510,7 @@ public class PopularTabela extends javax.swing.JFrame {
         //UNIDADES PROJETO INCLUSAO DIGITAL PARA IDOSOS
         Unidade unidade9 = new Unidade();
         unidade9.setNome("Gerenciamento de Alunos");
-        unidade9.setDescricao("Deve ser alocado alunos nos laboratórios.");        
+        unidade9.setDescricao("Deve ser alocado alunos nos laboratorios.");        
         unidade9.setProjeto(projetoInclusaoDigitalParaIdosos);
         unidade9.setDuracao(75);                     
         
@@ -521,7 +521,7 @@ public class PopularTabela extends javax.swing.JFrame {
         //UNIDADES PROJETO INCLUSAO DIGITAL PARA ADOLESCENTES
         Unidade unidade10 = new Unidade();
         unidade10.setNome("Gerenciamento de Professores");
-        unidade10.setDescricao("Deve ser alocado alunos nos laboratórios.");        
+        unidade10.setDescricao("Deve ser alocado alunos nos laboratorios.");        
         unidade10.setProjeto(projetoInclusaoDigitalParaAdolescentes);
         unidade10.setDuracao(75);                    
         
@@ -531,8 +531,8 @@ public class PopularTabela extends javax.swing.JFrame {
         
         //UNIDADES PROJETO APRIMORAR MECANISMOS PARA COORDENACAO        
         Unidade unidade11 = new Unidade();
-        unidade11.setNome("Gerenciamento do Mecanismos para coordenação.");
-        unidade11.setDescricao("Deve ser realizada uma pesquisa sobre os mecanismos para coordenação.");        
+        unidade11.setNome("Gerenciamento do Mecanismos para coordenacao.");
+        unidade11.setDescricao("Deve ser realizada uma pesquisa sobre os mecanismos para coordenacao.");        
         unidade11.setProjeto(projetoAprimorarMecanismosParaCoordenacao);
         unidade11.setDuracao(75);                      
         
@@ -542,8 +542,8 @@ public class PopularTabela extends javax.swing.JFrame {
         
         //UNIDADES PROJETO MAPEMENTO DE EMPRESAS
         Unidade unidade12 = new Unidade();
-        unidade12.setNome("Gerenciamento de empresas do Alto Vale do Itajaí");
-        unidade12.setDescricao("Deve ser uma pesquisas com as empresas de software do Alto Vale do Itajaí");        
+        unidade12.setNome("Gerenciamento de empresas do Alto Vale do Itajai");
+        unidade12.setDescricao("Deve ser uma pesquisas com as empresas de software do Alto Vale do Itajai");        
         unidade12.setProjeto(projetoMapementoDeEmpresas);
         unidade12.setDuracao(75);                   
         
@@ -560,30 +560,30 @@ public class PopularTabela extends javax.swing.JFrame {
         tarefa1.setStatus(Status.ABERTA);                                                 
         
         Tarefa tarefa2 = new Tarefa();
-        tarefa2.setTitulo("Ação de botão calcular resultado");
-        tarefa2.setDescricao("Deverá ser implementada um botão que calcule o resultado para o problema proposto no slide.");
+        tarefa2.setTitulo("Acao de botao calcular resultado");
+        tarefa2.setDescricao("Devera ser implementada um botao que calcule o resultado para o problema proposto no slide.");
         tarefa2.setDataEntrega(new java.util.Date());
         tarefa2.setPapelEnum(PapelEnum.PROGRAMADOR);
         tarefa2.setStatus(Status.ABERTA);                       
         
         Tarefa tarefa3 = new Tarefa();
         tarefa3.setTitulo("Tabela ilustrativa");
-        tarefa3.setDescricao("Deverá ser ser construída uma tabela com os dados informados no slide");
+        tarefa3.setDescricao("Devera ser ser construida uma tabela com os dados informados no slide");
         tarefa3.setDataEntrega(new java.util.Date());
         tarefa3.setPapelEnum(PapelEnum.DESIGNER);
         tarefa3.setStatus(Status.ABERTA);                                        
         
         Tarefa tarefa4 = new Tarefa();
-        tarefa4.setTitulo("Criação do diagrama de classes");
+        tarefa4.setTitulo("Criacao do diagrama de classes");
         tarefa4.setDescricao("Deve ser criado um diagrama de classes dos sistema.");
         tarefa4.setDataEntrega(new java.util.Date());
         tarefa4.setPapelEnum(PapelEnum.PROGRAMADOR);
         tarefa4.setStatus(Status.ABERTA);        
         
-        //TAREFA CRIAÇÃO DE JANELA INVISÍVEL
+        //TAREFA CRIACAO DE JANELA INVISIVEL
         Tarefa tarefa5 = new Tarefa();
-        tarefa5.setTitulo("Janela invisível");
-        tarefa5.setDescricao("Deve existir uma janela invisível.");
+        tarefa5.setTitulo("Janela invisivel");
+        tarefa5.setDescricao("Deve existir uma janela invisivel.");
         tarefa5.setDataEntrega(new java.util.Date());
         tarefa5.setPapelEnum(PapelEnum.PROGRAMADOR);
         tarefa5.setStatus(Status.ABERTA);                     
@@ -602,46 +602,46 @@ public class PopularTabela extends javax.swing.JFrame {
         slide1.setTarefas(tarefasSlide1);        
         
         Slide slide2 = new Slide();
-        slide2.setTitulo("Subtítulo1");
-        slide2.setDescricao("Descrição do slide...");
+        slide2.setTitulo("Subtitulo1");
+        slide2.setDescricao("Descricao do slide...");
         slide2.setRoteiro(roteiro1);
         tarefasSlide2.add(tarefa4);
         tarefasSlide2.add(tarefa5);
         slide2.setTarefas(tarefasSlide2);        
         
         Slide slide3 = new Slide();
-        slide3.setTitulo("Subtítulo2");
-        slide3.setDescricao("Descrição do slide...");
+        slide3.setTitulo("Subtitulo2");
+        slide3.setDescricao("Descricao do slide...");
         slide3.setRoteiro(roteiro1);
                 
         Slide slide4 = new Slide();
-        slide4.setTitulo("Subtítulo4");
-        slide4.setDescricao("Descrição do slide...");
+        slide4.setTitulo("Subtitulo4");
+        slide4.setDescricao("Descricao do slide...");
         slide4.setRoteiro(roteiro1);
         
         Slide slide5 = new Slide();
-        slide5.setTitulo("Subtítulo5");
-        slide5.setDescricao("Descrição do slide...");
+        slide5.setTitulo("Subtitulo5");
+        slide5.setDescricao("Descricao do slide...");
         slide5.setRoteiro(roteiro1);
         
         Slide slide6 = new Slide();
-        slide6.setTitulo("Subtítulo6");
-        slide6.setDescricao("Descrição do slide...");
+        slide6.setTitulo("Subtitulo6");
+        slide6.setDescricao("Descricao do slide...");
         slide6.setRoteiro(roteiro1);
         
         Slide slide7 = new Slide();
-        slide7.setTitulo("Subtítulo7");
-        slide7.setDescricao("Descrição do slide...");
+        slide7.setTitulo("Subtitulo7");
+        slide7.setDescricao("Descricao do slide...");
         slide7.setRoteiro(roteiro1);
         
         Slide slide8 = new Slide();
-        slide8.setTitulo("Subtítulo8");
-        slide8.setDescricao("Descrição do slide...");
+        slide8.setTitulo("Subtitulo8");
+        slide8.setDescricao("Descricao do slide...");
         slide8.setRoteiro(roteiro1);
         
         Slide slide9 = new Slide();
-        slide9.setTitulo("Subtítulo9");
-        slide9.setDescricao("Descrição do slide...");
+        slide9.setTitulo("Subtitulo9");
+        slide9.setDescricao("Descricao do slide...");
         slide9.setRoteiro(roteiro1);       
         
         tarefa1.setSlide(slide1);

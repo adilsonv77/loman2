@@ -16,7 +16,7 @@ public class TesteProjetoUnidade {
         Projeto projeto1 = new Projeto();
         projeto1.setTitulo("Projeto de Iniciativa Científica");
         projeto1.setDataInicio(new java.util.Date());
-        projeto1.setDescricao("Descrição do projeto de teste - Iniciativa Científica");
+        projeto1.setDescricao("Descri��o do projeto de teste - Iniciativa Científica");
         projeto1.setCoordenador(u1);
         
         Unidade unid1 = new Unidade();
