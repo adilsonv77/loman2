@@ -10,10 +10,10 @@
 	<h:panelGrid columns="2">
 		<h:form id="formDadosUnidade">
 			<h:panelGrid columns="2">
-				<h:outputText value="Projeto : " />
+				<h:outputText value="#{msg.project} : " />
 				<h:outputText
 					value="#{empty cadRoteiro.selecUnidade.projeto.titulo ? '-' : cadRoteiro.selecUnidade.projeto.titulo}" />
-				<h:outputText value="#{msg.name} : " />
+				<h:outputText value="#{msg.unit} : " />
 				<h:outputText
 					value="#{ empty cadRoteiro.selecUnidade.nome ? '-' : cadRoteiro.selecUnidade.nome}" />
 			</h:panelGrid>

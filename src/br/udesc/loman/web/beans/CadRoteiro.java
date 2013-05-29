@@ -32,8 +32,17 @@ public class CadRoteiro extends CRUDSemPesquisa<Roteiro> {
     private final CadastroRoteirosUC cruc;
     private TreeNode raiz;
     private TreeNode selectedNode;
+    private String teste;
 
-    public CadRoteiro() {
+    public String getTeste() {
+		return teste;
+	}
+
+	public void setTeste(String teste) {
+		this.teste = teste;
+	}
+
+	public CadRoteiro() {
         super(new CadastroRoteirosUC(LoManListener.getDAOFactory()), new String[]{});
         this.cruc = (CadastroRoteirosUC) cuc;
 

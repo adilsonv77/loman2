@@ -1,3 +1,4 @@
+<!-- POPUP STORYBOARD (POR UNIDADE) -->
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
@@ -26,7 +27,7 @@
 				<h:outputText value="#{slide.titulo}" />
 			</p:column>
 			<p:column>
-				<p:commandButton icon="ui-icon-note"
+				<p:commandButton icon="ui-icon-pencil"
 					actionListener="#{cadRoteiro.novaTarefa()}"
 					oncomplete="dialogTarefa.show()"
 					>
@@ -52,10 +53,10 @@
 				</p:commandButton>
 			</p:column>
 		</p:dataTable>
-		<p:commandButton value="#{msg.add}"
-			actionListener="#{cadRoteiro.novaTarefa()}"
+		<p:commandButton value="#{msg.add}" style="float:right;"
+			actionListener="#{cadRoteiro.novoSlide()}"
 			oncomplete="dialogTarefa.show()"
-			update=":tabUnidadeSlideTarefa:dlgTarefa">
+			update=":tabUnidadeSlideTarefa:dlgTarefa, :tabUnidadeSlideTarefa:formCadastroTarefas:editorCena">
 			<!-- 
 						update=":tabUnidadeSlideTarefa:formCadastroTarefas
                                      :tabUnidadeSlideTarefa:formTabelaTarefas:roteiroTarefas"

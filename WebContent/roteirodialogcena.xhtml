@@ -111,11 +111,11 @@
 	                </p:dataTable>
 	            </p:tab>
 	        </p:tabView>
-	        <p:editor value="#{bean.text}" controls="bold italic underline strikethrough subscript superscript
-	        font size style color highlight bullets numbering alignleft center alignright justify undo redo rule
-	        redo rule image link unlink cut copy paste pastetext print source outdent indent removeFormat " 
-	        
-	        />
+	        <p:editor id="editorSlide"
+                          widgetVar="editorDoSlide"                  
+                          value="#{cadRoteiro.selecSlide.descricao}" 
+                          width="400"
+                          height="300"/>
         </h:panelGrid>
     </p:dialog>
 
