@@ -12,10 +12,10 @@
               width="800" 
               resizable="false"
               appendToBody="true"
-              id="dialogTarefa">
+              id="dlgTarefa">
         <h:panelGrid columns="2">
         	<h:outputText value="#{msg.projects} : "/>
-            <h:outputText value="#{empty cadRoteiro.selecProjeto.titulo ? '-' : cadRoteiro.selecProjeto.titulo}"/>
+            <h:outputText value="#{empty cadRoteiro.selecUnidade.projeto.titulo ? '-' : cadRoteiro.selecUnidade.projeto.titulo}"/>
             <h:outputText value="#{msg.name} : "/>
             <h:outputText value="#{empty cadRoteiro.selecUnidade.nome ? '-' : cadRoteiro.selecUnidade.nome}"/>                                
         </h:panelGrid>
