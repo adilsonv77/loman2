@@ -240,7 +240,7 @@ public class CadProjeto extends CRUD<Projeto, String>{
 
     public void addObjetivo() {
         if (getSelecObjetivo().getDescricao().trim().equals("")) {
-            mensagem(FacesMessage.SEVERITY_ERROR, "DescriÃ§Ã£o", "Campo descriÃ§Ã£o Ã© obrigatÃ³rio!");
+            mensagem(FacesMessage.SEVERITY_ERROR, "Descrição", "Campo Descrição é obrigatório!");
         } else {
             getSelecObjetivo().setUnidade(getSelecUnidade());
             this.getSelecUnidade().getObjetivos().add(getSelecObjetivo());
@@ -250,7 +250,7 @@ public class CadProjeto extends CRUD<Projeto, String>{
 
     public void alterarObjetivo() {
         if (getSelecObjetivo().getDescricao().trim().equals("")) {
-            mensagem(FacesMessage.SEVERITY_ERROR, "DescriÃ§Ã£o", "Campo descriÃ§Ã£o Ã© obrigatÃ³rio!");
+            mensagem(FacesMessage.SEVERITY_ERROR, "Descrição", "Campo Descrição é obrigatório!");
         } else {
             this.getSelecUnidade().getObjetivos().set(indexObj, getSelecObjetivo());
             novoObjetivo();
@@ -266,7 +266,7 @@ public class CadProjeto extends CRUD<Projeto, String>{
      * *******************************
      */
     /*
-     * ConteÃºdo
+     * Conteúdo
      */
     /**
      * *******************************
@@ -300,7 +300,7 @@ public class CadProjeto extends CRUD<Projeto, String>{
 
     public void addConteudo() {
         if (getSelecConteudo().getDescricao().trim().equals("")) {
-            mensagem(FacesMessage.SEVERITY_ERROR, "DescriÃ§Ã£o", "Campo descriÃ§Ã£o Ã© obrigatÃ³rio!");
+            mensagem(FacesMessage.SEVERITY_ERROR, "Descrição", "Campo Descrição é obrigatório!");
         } else {
             getSelecConteudo().setUnidade(getSelecUnidade());
             this.getSelecUnidade().getConteudos().add(getSelecConteudo());
@@ -310,7 +310,7 @@ public class CadProjeto extends CRUD<Projeto, String>{
 
     public void alterarConteudo() {
         if (getSelecConteudo().getDescricao().trim().equals("")) {
-            mensagem(FacesMessage.SEVERITY_ERROR, "DescriÃ§Ã£o", "Campo descriÃ§Ã£o Ã© obrigatÃ³rio!");
+            mensagem(FacesMessage.SEVERITY_ERROR, "Descrição", "Campo Descrição é obrigatório!");
         } else {
             this.getSelecUnidade().getConteudos().set(indexCon, getSelecConteudo());
             novoConteudo();
@@ -360,7 +360,7 @@ public class CadProjeto extends CRUD<Projeto, String>{
 
     public void addAtividade() {
         if (getSelecAtividade().getDescricao().trim().equals("")) {
-            mensagem(FacesMessage.SEVERITY_ERROR, "DescriÃ§Ã£o", "Campo descriÃ§Ã£o Ã© obrigatÃ³rio!");
+            mensagem(FacesMessage.SEVERITY_ERROR, "Descrição", "Campo Descrição é obrigatório!");
         } else {
             getSelecAtividade().setUnidade(getSelecUnidade());
             this.getSelecUnidade().getAtividades().add(getSelecAtividade());
@@ -370,7 +370,7 @@ public class CadProjeto extends CRUD<Projeto, String>{
 
     public void alterarAtividade() {
         if (getSelecAtividade().getDescricao().trim().equals("")) {
-            mensagem(FacesMessage.SEVERITY_ERROR, "DescriÃ§Ã£o", "Campo descriÃ§Ã£o Ã© obrigatÃ³rio!");
+            mensagem(FacesMessage.SEVERITY_ERROR, "Descrição", "Campo Descrição é obrigatório!");
         } else {
             this.getSelecUnidade().getAtividades().set(indexAti, getSelecAtividade());
             novaAtividade();
@@ -386,7 +386,7 @@ public class CadProjeto extends CRUD<Projeto, String>{
      * *******************************
      */
     /*
-     * Formas de AvaliaÃ§Ã£o
+     * Formas de Avaliação
      */
     /**
      * *******************************
@@ -420,7 +420,7 @@ public class CadProjeto extends CRUD<Projeto, String>{
 
     public void addFormaAvaliacao() {
         if (getSelecFormaAvaliacao().getDescricao().trim().equals("")) {
-            mensagem(FacesMessage.SEVERITY_ERROR, "DescriÃ§Ã£o", "Campo descriÃ§Ã£o Ã© obrigatÃ³rio!");
+            mensagem(FacesMessage.SEVERITY_ERROR, "Descrição", "Campo Descrição é obrigatório!");
         } else {
             getSelecFormaAvaliacao().setUnidade(getSelecUnidade());
             this.getSelecUnidade().getFormasAvaliacao().add(getSelecFormaAvaliacao());
@@ -430,7 +430,7 @@ public class CadProjeto extends CRUD<Projeto, String>{
 
     public void alterarFormaAvaliacao() {
         if (getSelecFormaAvaliacao().getDescricao().trim().equals("")) {
-            mensagem(FacesMessage.SEVERITY_ERROR, "DescriÃ§Ã£o", "Campo descriÃ§Ã£o Ã© obrigatÃ³rio!");
+            mensagem(FacesMessage.SEVERITY_ERROR, "Descrição", "Campo Descrição é obrigatório!");
         } else {
             this.getSelecUnidade().getFormasAvaliacao().set(indexForAva, getSelecFormaAvaliacao());
             novaFormaAvaliacao();

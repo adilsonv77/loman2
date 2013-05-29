@@ -1,3 +1,4 @@
+<!-- Popup Storyboard -->
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:p="http://primefaces.org/ui"
                 xmlns:ui="http://java.sun.com/jsf/facelets"                
@@ -8,11 +9,12 @@
     
     <h:form id="formDadosUnidade">
         <h:panelGrid columns="2">
+        	<h:outputText value="Projeto : "/>
+            <h:outputText value="#{empty cadRoteiro.selecUnidade.projeto.titulo ? '-' : cadRoteiro.selecUnidade.projeto.titulo}"/>
             <h:outputText value="#{msg.name} : "/>
-            <h:outputText value="#{cadRoteiro.selecUnidade.nome}"/>
-            <h:outputText value="#{msg.duration} : "/>
-            <h:outputText value="#{cadRoteiro.selecUnidade.descricao}"/>                                
+            <h:outputText value="#{ empty cadRoteiro.selecUnidade.nome ? '-' : cadRoteiro.selecUnidade.nome}"/>                                
         </h:panelGrid>
+        <h:panelGrid columns="2">
         <p:tabView>
             <p:tab title="#{msg.objectives}">
                 <p:dataTable emptyMessage="#{msg.noObjectivesFound}" 
@@ -35,7 +37,7 @@
                         <h:outputText value="#{objetivo.descricao}"/>
                     </p:column>            
                 </p:dataTable>
-            </p:tab>         
+            </p:tab>    
             <p:tab title="#{msg.contents}">
                 <p:dataTable emptyMessage="#{msg.noContentsFound}" 
                              value="#{cadRoteiro.selecUnidade.conteudos}" 
@@ -102,7 +104,64 @@
                     </p:column>                        
                 </p:dataTable>
             </p:tab>
-        </p:tabView>                                   
+        </p:tabView>
+        <h:form id="formTabelaSlides">
+            <p:dataTable id="roteiroSlides"
+                         rowKey="#{slide.titulo}"
+                         emptyMessage="#{msg.noSlidesFound}" 
+                         value="#{cadRoteiro.registro.slides}"
+                         var="slide"                               
+                         pageLinks="3"
+                         rowIndexVar="linha"
+                         style="max-width: 400px; 
+                         min-width: 200px;
+                         width: 400px;">                
+                <p:column>
+                    <f:facet name="header">
+                        #
+                    </f:facet>
+                    <h:outputText value="#{linha+1}"/>
+                </p:column>
+                <p:column style="max-width: 260px;">
+                    <f:facet name="header">
+                        #{msg.slides}
+                    </f:facet>
+                    <h:outputText value="#{slide.titulo}"/>
+                </p:column>                  
+                <p:column>
+                    <p:commandButton icon="ui-icon-note"
+                                     actionListener="#{cadRoteiro.novaTarefa()}"
+                                     oncomplete="dialogTarefa.show()"
+                                     update=":tabUnidadeSlideTarefa:formCadastroTarefas
+                                     :tabUnidadeSlideTarefa:formTabelaTarefas:roteiroTarefas">
+                        <f:setPropertyActionListener value="#{slide}"
+                                                     target="#{cadRoteiro.selecSlide}"/>
+                    </p:commandButton>      
+                    <p:commandButton icon="ui-icon ui-icon-pencil"
+                                     actionListener="#{cadRoteiro.alteraSlide()}"
+                                     update=":tabUnidadeSlideTarefa:formCadastroSlide">
+                        <f:setPropertyActionListener value="#{slide}"
+                                                     target="#{cadRoteiro.selecSlide}"/>
+                    </p:commandButton>
+                    <p:commandButton icon="ui-icon ui-icon-close"                                     
+                                     oncomplete="confirmDeleteSlide.show()"
+                                     process="@this">  
+                        <f:setPropertyActionListener value="#{slide}"
+                                                     target="#{cadRoteiro.selecSlide}"/>
+                    </p:commandButton>                   
+                </p:column>
+            </p:dataTable>
+			<p:commandButton value="#{msg.add}"
+                                     actionListener="#{cadRoteiro.novaTarefa()}"
+                                     oncomplete="dialogTarefa.show()"
+                                     update=":tabUnidadeSlideTarefa:formCadastroTarefas
+                                     :tabUnidadeSlideTarefa:formTabelaTarefas:roteiroTarefas">
+                        <f:setPropertyActionListener value="#{slide}"
+                                                     target="#{cadRoteiro.selecSlide}"/>
+                    </p:commandButton> 
+        </h:form>   
+        </h:panelGrid> 
+		<ui:include src="roteirodialogtarefa.xhtml"/>             
     </h:form>  
     
 </ui:composition>

@@ -1,4 +1,4 @@
-// Método chamado quando a API esta carregada.
+// M�todo chamado quando a API esta carregada.
 function draw() {
     this.id = 0;
     // Opções do Mapa

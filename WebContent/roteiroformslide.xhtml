@@ -13,9 +13,13 @@
                     <p:inputText id="tituloSlide"
                                  value="#{cadRoteiro.selecSlide.titulo}" 
                                  maxlength="50"                                     
-                                 size="60">
+                                 size="40">
                         <f:validateLength maximum="50"/>
-                    </p:inputText>                                       
+                    </p:inputText>
+                    <h:outputText value="Projeto : "/>
+            		<h:outputText value="#{cadRoteiro.selecProjeto.titulo}"/>
+            		<h:outputText value="Unidade : "/>
+            		<h:outputText value="#{cadRoteiro.selecUnidade.nome}"/>                               
                 </h:panelGrid>
                 <p:editor id="editorSlide"
                           widgetVar="editorDoSlide"                  
