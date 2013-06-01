@@ -32,17 +32,8 @@ public class CadRoteiro extends CRUDSemPesquisa<Roteiro> {
     private final CadastroRoteirosUC cruc;
     private TreeNode raiz;
     private TreeNode selectedNode;
-    private String teste;
 
-    public String getTeste() {
-		return teste;
-	}
-
-	public void setTeste(String teste) {
-		this.teste = teste;
-	}
-
-	public CadRoteiro() {
+    public CadRoteiro() {
         super(new CadastroRoteirosUC(LoManListener.getDAOFactory()), new String[]{});
         this.cruc = (CadastroRoteirosUC) cuc;
 
@@ -63,7 +54,7 @@ public class CadRoteiro extends CRUDSemPesquisa<Roteiro> {
 
     public String novoRoteiro() throws Exception {
         novo();
-        novaTarefa();
+        //novaTarefa();
         setSelecUnidade(new Unidade());
         slideDesabilitado = true;
         return "roteiroscad";
@@ -118,7 +109,7 @@ public class CadRoteiro extends CRUDSemPesquisa<Roteiro> {
     }
 
     public void editarRoteiro(Unidade unidade) {
-        novaTarefa();
+        //novaTarefa();
         setSelecUnidade(unidade);
         setRegistro(unidade.getRoteiro());
         slideDesabilitado = true;
@@ -168,14 +159,14 @@ public class CadRoteiro extends CRUDSemPesquisa<Roteiro> {
 
     public void onNodeSelect(NodeSelectEvent event) throws Exception {
         novoSlide();
-        novaTarefa();
+        //novaTarefa();
         RequestContext context = RequestContext.getCurrentInstance();
         if (event.getTreeNode().getData().getClass() != String.class) {
             this.unidade = (Unidade) event.getTreeNode().getData();
             this.registro.setUnidade(getSelecUnidade());
             this.registro.setId(getSelecUnidade().getRoteiro().getId());
             this.registro.setSlides(getSelecUnidade().getRoteiro().getSlides());
-            this.registro.setTarefas(getSelecUnidade().getRoteiro().getTarefas());
+            //this.registro.setTarefas(getSelecUnidade().getRoteiro().getTarefas());
             this.slide.setRoteiro(this.registro);
             this.atualizaListaDeConteudos();
 
@@ -228,7 +219,7 @@ public class CadRoteiro extends CRUDSemPesquisa<Roteiro> {
         this.registro.setUnidade(getSelecUnidade());
         this.registro.setId(getSelecUnidade().getRoteiro().getId());
         this.registro.setSlides(getSelecUnidade().getRoteiro().getSlides());
-        this.registro.setTarefas(getSelecUnidade().getRoteiro().getTarefas());
+        //this.registro.setTarefas(getSelecUnidade().getRoteiro().getTarefas());
         this.slide.setRoteiro(this.registro);
     }
 
@@ -326,13 +317,13 @@ public class CadRoteiro extends CRUDSemPesquisa<Roteiro> {
 
     public void alterarTarefa() throws Exception {
         if (getSelecTarefa().getTitulo().trim().equals("")) {
-            mensagem(FacesMessage.SEVERITY_ERROR, "Titulo", "Campo tÃ­tulo Ã© obrigatÃ³rio!");
+            mensagem(FacesMessage.SEVERITY_ERROR, "Titulo", "Campo t�tulo � obrigat�rio!");
         } else {
             if (getSelecTarefa().getDescricao().trim().equals("")) {
-                mensagem(FacesMessage.SEVERITY_ERROR, "DescriÃ§Ã£o", "Campo descriÃ§Ã£o Ã© obrigatÃ³rio!");
+                mensagem(FacesMessage.SEVERITY_ERROR, "Descri��o", "Campo descri��o � obrigat�rio!");
             } else {
                 if (getSelecTarefa().getDataEntrega() == null) {
-                    mensagem(FacesMessage.SEVERITY_ERROR, "Data Entrega", "Campo data entrega Ã© obrigatÃ³rio!");
+                    mensagem(FacesMessage.SEVERITY_ERROR, "Data Entrega", "Campo data entrega � obrigat�rio!");
                 } else {
                     this.registro.getTarefas().set(indexTarRot, getSelecTarefa());
                     this.getSelecSlide().getTarefas().set(indexTarSli, getSelecTarefa());

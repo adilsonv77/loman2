@@ -12,8 +12,9 @@
             <p:submenu label="#{msg.projects}">
                 <p:menuitem ajax="false" value="#{msg.registerProjects}" action="#{cadProjeto.novoProjeto}"/> 
                 <p:menuitem ajax="false" value="#{msg.registerScript}" action="#{cadRoteiro.novoRoteiro}" rendered="#{cadUsuario.verificarUsuarioCoordenadorOuProfessorConteudista()}"/>                
-            </p:submenu>            
-            <p:submenu label="#{msg.task}" rendered="#{cadUsuario.verificarUsuarioProgramadorOuDesignerOuCoordenador()}">
+            </p:submenu> 
+                       
+<!--             <p:submenu label="#{msg.task}" rendered="#{cadUsuario.verificarUsuarioProgramadorOuDesignerOuCoordenador()}">
                 <p:menuitem ajax="false" value="#{msg.taskAssume}" action="#{cadTarefa.assumirTarefa()}" rendered="#{cadUsuario.verificarUsuarioProgramadorOuDesigner()}"/>
                 <p:menuitem ajax="false" value="#{msg.contentAvailable}" action="#{cadTarefa.disponibilizarMaterial()}" rendered="#{cadUsuario.verificarUsuarioProgramadorOuDesigner()}"/>
                 <p:menuitem ajax="false" value="#{msg.reviewTasks}" action="#{cadTarefa.revisarTarefa()}" rendered="#{cadUsuario.verificarUsuarioCoordenador()}"/>                
@@ -24,7 +25,7 @@
                 <p:menuitem ajax="false" value="#{msg.reviewUnit}" action="#{cadUnidade.revisarUnidade()}" rendered="#{cadUsuario.verificarUsuarioProfessorConteudista()}"/>
                 <p:menuitem ajax="false" value="#{msg.proceedingUnits}" action="#{cadUnidade.tramitarUnidade()}" rendered="#{cadUsuario.verificarUsuarioProfessorConteudista()}"/>
                 <p:menuitem ajax="false" value="#{msg.checkReviewUnit}" action="#{cadRoteiro.verificarRevisoesUnidade()}" rendered="#{cadUsuario.verificarUsuarioCoordenador()}"/>
-            </p:submenu>
+            </p:submenu>  -->
             <p:menuitem ajax="false" value="#{msg.logout}" actionListener="#{cadUsuario.logout()}" icon="ui-icon ui-icon-power" />            
 <!--            <p:menuitem ajax="false" value="TESTE MINDMAP" action="#{cadRoteiro.testeMindMap()}" />      -->
         </p:menubar>

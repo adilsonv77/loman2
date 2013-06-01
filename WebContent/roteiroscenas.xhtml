@@ -27,7 +27,7 @@
 				<h:outputText value="#{slide.titulo}" />
 			</p:column>
 			<p:column>
-				<p:commandButton icon="ui-icon-pencil"
+				<p:commandButton id="editScene" icon="ui-icon-pencil"
 					actionListener="#{cadRoteiro.novaTarefa()}"
 					oncomplete="dialogTarefa.show()"
 					>
@@ -38,6 +38,7 @@
 					<f:setPropertyActionListener value="#{slide}"
 						target="#{cadRoteiro.selecSlide}" />
 				</p:commandButton>
+				<p:tooltip for="editScene" value="#{msg.saveTooltip}"/>
 				<!-- 
 					<p:commandButton icon="ui-icon ui-icon-pencil"
 						actionListener="#{cadRoteiro.alteraSlide()}"
@@ -53,7 +54,7 @@
 				</p:commandButton>
 			</p:column>
 		</p:dataTable>
-		<p:commandButton value="#{msg.add}" style="float:right;"
+		<p:commandButton id="addScene" value="#{msg.add}" style="float:right;"
 			actionListener="#{cadRoteiro.novoSlide()}"
 			oncomplete="dialogTarefa.show()"
 			update=":tabUnidadeSlideTarefa:dlgTarefa, :tabUnidadeSlideTarefa:formCadastroTarefas:editorCena">
@@ -64,6 +65,7 @@
 			<f:setPropertyActionListener value="#{slide}"
 				target="#{cadRoteiro.selecSlide}" />
 		</p:commandButton>
+		<p:tooltip for="addScene" value="#{msg.addSceneTooltip}"/>
 	</h:form>
 
 	<ui:include src="roteirodialogtarefa.xhtml"/>

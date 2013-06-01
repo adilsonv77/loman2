@@ -26,8 +26,8 @@ public class Slide implements Serializable, TemGetId{
     @JoinColumn(name = "cd_roteiro")
     private Roteiro roteiro;
     
-    @OneToMany(mappedBy = "slide", cascade = CascadeType.ALL)
-    private List<Tarefa> tarefas = new ArrayList<Tarefa>();
+    //@OneToMany(mappedBy = "slide", cascade = CascadeType.ALL)
+    //private List<Tarefa> tarefas = new ArrayList<Tarefa>();
     
     public Roteiro getRoteiro() {
         return roteiro;
@@ -36,7 +36,7 @@ public class Slide implements Serializable, TemGetId{
     public void setRoteiro(Roteiro roteiro) {
         this.roteiro = roteiro;
     }
-
+/*
     public List<Tarefa> getTarefas() {
         return tarefas;
     }
@@ -44,7 +44,7 @@ public class Slide implements Serializable, TemGetId{
     public void setTarefas(List<Tarefa> tarefas) {
         this.tarefas = tarefas;
     }        
-
+*/
     public String getDescricao() {
         return descricao;
     }
