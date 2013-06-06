@@ -22,7 +22,7 @@ import javax.persistence.*;
         + "JOIN p.unidades AS u "
         + "WHERE p.coordenador = (:usuario) "
         + "ORDER BY p.titulo"),
-    
+        /*    
     @NamedQuery(
         name="unidades.prontaspararevisao",
         query="SELECT DISTINCT u "
@@ -46,7 +46,7 @@ import javax.persistence.*;
         + "AND u.objetivos IS NOT EMPTY "
         + "AND u.roteiro.tarefas IS NOT EMPTY "
         + "ORDER BY p.titulo"),
-    
+  
     @NamedQuery(
         name="unidades.comproblemas",
         query="SELECT DISTINCT u "
@@ -57,7 +57,7 @@ import javax.persistence.*;
         + "AND p.coordenador = (:usuario) "
         + "AND u.roteiro.tarefas IS NOT EMPTY "
         + "ORDER BY p.titulo"),
-    
+     
     @NamedQuery(
         name="unidades.emandamento",
         query="SELECT DISTINCT u "
@@ -68,7 +68,7 @@ import javax.persistence.*;
         + "AND p.coordenador = (:usuario) "
         + "AND u.roteiro.tarefas IS NOT EMPTY "
         + "ORDER BY p.titulo")
-        
+         */
 })
 
 

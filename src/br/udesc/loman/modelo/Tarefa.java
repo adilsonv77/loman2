@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
-
+/*
 @NamedQueries({
     @NamedQuery(
         name="tarefa.porTitulo",
@@ -87,8 +87,9 @@ import javax.persistence.*;
         + "AND ((e.papelEnum = br.udesc.loman.modelo.PapelEnum.DESIGNER) "
         + "OR (e.papelEnum = br.udesc.loman.modelo.PapelEnum.PROGRAMADOR))) "
         + "OR p.coordenador = (:usuario)")
+        
 })
-
+*/
 @Entity
 @Table(name="tarefas")
 public class Tarefa implements Serializable, TemGetId {
