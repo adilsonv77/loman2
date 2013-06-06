@@ -209,7 +209,7 @@ public class CadRoteiro extends CRUDSemPesquisa<Roteiro> {
         this.registro.setUnidade(getSelecUnidade());
         this.registro.setId(getSelecUnidade().getRoteiro().getId());
         this.registro.setSlides(getSelecUnidade().getRoteiro().getSlides());
-        this.registro.setTarefas(getSelecUnidade().getRoteiro().getTarefas());
+        //this.registro.setTarefas(getSelecUnidade().getRoteiro().getTarefas());
         this.slide.setRoteiro(this.registro);
         atualizarOcorrenciasUnidade();
         this.unidadeDesabilitado = false;
@@ -257,6 +257,7 @@ public class CadRoteiro extends CRUDSemPesquisa<Roteiro> {
     /**
      * *******************************
      */
+    /*
     private Tarefa tarefa = new Tarefa();
     private int indexTarRot = -1;
     private int indexTarSli = -1;
@@ -336,16 +337,16 @@ public class CadRoteiro extends CRUDSemPesquisa<Roteiro> {
             }
         }
     }
-
+*/
     public void addSlide() throws Exception {
     	System.out.println("addSlide");
         if (getSelecSlide().getTitulo().trim().equals("")) {
-            mensagem(FacesMessage.SEVERITY_ERROR, "Titulo", "Campo tÃ­tulo Ã© obrigatÃ³rio!");
+            mensagem(FacesMessage.SEVERITY_ERROR, "Titulo", "Campo t�tulo obrigat�rio!");
         } else {
             getSelecSlide().setRoteiro(this.registro);
             cruc.incluirSlide(getSelecSlide());
             this.registro.getSlides().add(getSelecSlide());
-            mensagem(FacesMessage.SEVERITY_INFO, "Slide", slide.getTitulo() + " incluÃ­do com sucesso!");
+            mensagem(FacesMessage.SEVERITY_INFO, "Slide", slide.getTitulo() + " inclu�do com sucesso!");
             alterandoRoteiro = true;
         }
         novoSlide();
@@ -362,7 +363,7 @@ public class CadRoteiro extends CRUDSemPesquisa<Roteiro> {
             novoSlide();
         }
     }
-
+/*
     public void limparTarefa() {
         this.tarefa = new Tarefa();
         this.tarefa.setPapelEnum(PapelEnum.DESIGNER);
@@ -382,6 +383,7 @@ public class CadRoteiro extends CRUDSemPesquisa<Roteiro> {
     public void alteraTarefa() {
         alterandoTarefa = true;
     }
+    */
     /**
      * *******************************
      */
@@ -415,7 +417,7 @@ public class CadRoteiro extends CRUDSemPesquisa<Roteiro> {
     public void setSelecSlide(Slide slide) throws Exception {
         this.slide = slide;
         this.indexSli = this.registro.getSlides().indexOf(slide);
-        atualizarTarefasSlide();
+        //atualizarTarefasSlide();
     }
 
     public void novoSlide() {
@@ -423,6 +425,7 @@ public class CadRoteiro extends CRUDSemPesquisa<Roteiro> {
         alterandoSlide = false;
         slideDesabilitado = true;
     }
+    /*
     private List<Tarefa> tarefasSlide = new ArrayList<Tarefa>();
 
     public List<Tarefa> getTarefasSlide() {
@@ -432,25 +435,25 @@ public class CadRoteiro extends CRUDSemPesquisa<Roteiro> {
     public void setTarefasSlide(List<Tarefa> tarefasSlide) {
         this.tarefasSlide = tarefasSlide;
     }
-
+*/
     //NÃ£o usarei mais
     public void onRowSelectSlide(SelectEvent event) throws Exception {
         this.indexSli = this.registro.getSlides().indexOf((Slide) event.getObject());
         alterandoSlide = true;
         this.setSelecSlide((Slide) event.getObject());
-        atualizarTarefasSlide();
+        //atualizarTarefasSlide();
         this.slideDesabilitado = false;
     }
-
+//Refazer sem tarefas!
     public void deleteSlide() throws Exception {
-        if (tarefasSlide.isEmpty()) {
+        //if (tarefasSlide.isEmpty()) {
             this.registro.getSlides().remove(indexSli);
             cruc.excluirSlide(getSelecSlide());
             alterandoRoteiro = true;
             mensagem(FacesMessage.SEVERITY_INFO, "Slide", getSelecSlide().getTitulo() + " excluido com sucesso!");
-        } else {
+       /* } else {
             mensagem(FacesMessage.SEVERITY_WARN, "Slide", "Slide nÃ£o foi excluÃ­do, ele possui " + getTarefasSlide().size() + " tarefa(s) associada(s)!");
-        }
+        }*/
         novoSlide();
     }
     private boolean slideDesabilitado = true;

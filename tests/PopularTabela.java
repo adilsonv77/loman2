@@ -599,7 +599,7 @@ public class PopularTabela extends javax.swing.JFrame {
         tarefasSlide1.add(tarefa1);
         tarefasSlide1.add(tarefa2);
         tarefasSlide1.add(tarefa3);
-        slide1.setTarefas(tarefasSlide1);        
+        //slide1.setTarefas(tarefasSlide1);        
         
         Slide slide2 = new Slide();
         slide2.setTitulo("Subtitulo1");
@@ -607,7 +607,7 @@ public class PopularTabela extends javax.swing.JFrame {
         slide2.setRoteiro(roteiro1);
         tarefasSlide2.add(tarefa4);
         tarefasSlide2.add(tarefa5);
-        slide2.setTarefas(tarefasSlide2);        
+        //slide2.setTarefas(tarefasSlide2);        
         
         Slide slide3 = new Slide();
         slide3.setTitulo("Subtitulo2");
@@ -678,7 +678,7 @@ public class PopularTabela extends javax.swing.JFrame {
         slides1.add(slide9);
                 
         //ROTEIRO GERENCIAMENTO DO PROJETO LOMAN        
-        roteiro1.setTarefas(tarefas1);
+        //roteiro1.setTarefas(tarefas1);
         roteiro1.setSlides(slides1);                                                      
         unidade1.setRoteiro(roteiro1);     
         roteiro1.setUnidade(unidade1);

@@ -1,11 +1,11 @@
 package br.udesc.loman.modelo;
 
-import br.udesc.loman.security.Criptografia;
+//import br.udesc.loman.security.Criptografia;
 import br.udesc.modelo.TemGetId;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-import javax.persistence.CascadeType;
+//import java.util.ArrayList;
+//import java.util.List;
+//import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,7 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
+//import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @NamedQueries({
@@ -50,7 +50,7 @@ public class Usuario implements Serializable, TemGetId {
     private String email = "";
     @Column(name = "bo_administrador")
     private boolean administrador = false;
-   
+/*   
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
     private List<Tarefa> tarefas = new ArrayList<Tarefa>();
 
@@ -61,7 +61,7 @@ public class Usuario implements Serializable, TemGetId {
     public void setTarefas(List<Tarefa> tarefas) {
         this.tarefas = tarefas;
     }        
-    
+*/  
     public Usuario() {
     }
 

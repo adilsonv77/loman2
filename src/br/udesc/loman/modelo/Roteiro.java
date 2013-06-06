@@ -27,10 +27,10 @@ public class Roteiro implements Serializable, TemGetId {
    
     @OneToMany(mappedBy = "roteiro", cascade = CascadeType.ALL)        
     private List<Slide> slides = new ArrayList<Slide>();
-        
+    /*    
     @OneToMany(mappedBy = "roteiro", cascade = CascadeType.ALL)        
     private List<Tarefa> tarefas = new ArrayList<Tarefa>();        
-    
+    */
     @OneToOne()
     @JoinColumn(name = "cd_unidade")
     private Unidade unidade;
@@ -46,7 +46,7 @@ public class Roteiro implements Serializable, TemGetId {
     public Roteiro() {
         super();
         this.slides = new ArrayList<Slide>();
-        this.tarefas = new ArrayList<Tarefa>();
+        //this.tarefas = new ArrayList<Tarefa>();
     }        
 
     @Override
@@ -65,7 +65,7 @@ public class Roteiro implements Serializable, TemGetId {
     public void setSlides(List<Slide> slides) {
         this.slides = slides;
     }
-
+/*
     public List<Tarefa> getTarefas() {
         return tarefas;
     }
@@ -73,5 +73,5 @@ public class Roteiro implements Serializable, TemGetId {
     public void setTarefas(List<Tarefa> tarefas) {
         this.tarefas = tarefas;
     }        
-    
+*/
 }
