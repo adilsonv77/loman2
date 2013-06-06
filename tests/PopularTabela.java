@@ -552,6 +552,7 @@ public class PopularTabela extends javax.swing.JFrame {
         roteiro12.setUnidade(unidade12);                                                            
         
         //TAREFAS UNIDADE GERENCIAMENTO DO PROJETO LOMAN 
+       /*
         Tarefa tarefa1 = new Tarefa();
         tarefa1.setTitulo("Imagem ilustrativa");
         tarefa1.setDescricao("A imagem pode ser em qualquer formato");
@@ -591,22 +592,22 @@ public class PopularTabela extends javax.swing.JFrame {
         //SLIDES UNIDADE GERENCIAMENTO DE PROJETO LOMAN    
         List<Tarefa> tarefasSlide1 = new ArrayList<Tarefa>();
         List<Tarefa> tarefasSlide2 = new ArrayList<Tarefa>();        
-        
+        */
         Slide slide1 = new Slide();
         slide1.setTitulo("TITULO SLIDE");
         slide1.setDescricao("DESCRICAO SLIDE");
         slide1.setRoteiro(roteiro1);
-        tarefasSlide1.add(tarefa1);
-        tarefasSlide1.add(tarefa2);
-        tarefasSlide1.add(tarefa3);
+        //tarefasSlide1.add(tarefa1);
+        //tarefasSlide1.add(tarefa2);
+        //tarefasSlide1.add(tarefa3);
         //slide1.setTarefas(tarefasSlide1);        
         
         Slide slide2 = new Slide();
         slide2.setTitulo("Subtitulo1");
         slide2.setDescricao("Descricao do slide...");
         slide2.setRoteiro(roteiro1);
-        tarefasSlide2.add(tarefa4);
-        tarefasSlide2.add(tarefa5);
+        //tarefasSlide2.add(tarefa4);
+        //tarefasSlide2.add(tarefa5);
         //slide2.setTarefas(tarefasSlide2);        
         
         Slide slide3 = new Slide();
@@ -643,7 +644,7 @@ public class PopularTabela extends javax.swing.JFrame {
         slide9.setTitulo("Subtitulo9");
         slide9.setDescricao("Descricao do slide...");
         slide9.setRoteiro(roteiro1);       
-        
+/*        
         tarefa1.setSlide(slide1);
         tarefa1.setRoteiro(slide1.getRoteiro());
         
@@ -665,7 +666,7 @@ public class PopularTabela extends javax.swing.JFrame {
         tarefas1.add(tarefa3);
         tarefas1.add(tarefa4);
         tarefas1.add(tarefa5);
-        
+  */      
         List<Slide> slides1 = new ArrayList<Slide>();
         slides1.add(slide1);
         slides1.add(slide2);
