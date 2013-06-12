@@ -79,71 +79,23 @@
 					</h:panelGrid>
 					<p:editor id="editorCena" widgetVar="editorDoSlide" value="#{cadRoteiro.selecSlide.descricao}" width="400" height="300">
 					</p:editor>
-					<h:panelGrid columns="2" style="float:right">
-						<p:commandButton id="addSlide" style="float:right;"
-	                                     value="#{msg.save}"                                       
-	                                     actionListener="#{cadRoteiro.addSlide()}"
-	                                     update=":tabUnidadeSlideTarefa:formTabelaSlides"
-	                                     oncomplete="dialogTarefa.hide()"
-	                                     />
-						<p:commandButton id="cancelAddSlide" style="float:right;" value="#{msg.cancel}" action="cancel" process="@this" />
+					<h:panelGrid columns="2" style="width:100%;float:left;">
+						<h:outputText value="Cena: " style="align:left;"/>
+						<h:panelGrid columns="2" style="width:100%;float:right">
+							<p:commandButton id="addSlide" style="float:right;"
+		                                     value="#{msg.save}"                                       
+		                                     actionListener="#{cadRoteiro.addSlide()}"
+		                                     update=":tabUnidadeSlideTarefa:formTabelaSlides"
+		                                     oncomplete="dialogTarefa.hide()"
+		                                     />
+							<p:commandButton id="cancelAddSlide" style="float:right;" value="#{msg.cancel}" action="cancel" process="@this" />
+						</h:panelGrid>
 					</h:panelGrid>
 				</h:panelGrid>
             </h:panelGrid>
         </h:form>
 
-        <h:form id="formTabelaTarefas">
-            <!-- <p:dataTable id="roteiroTarefas" 
-                         emptyMessage="#{msg.noTasksFound}" 
-                         value=""
-                         var="tarefa"
-                         paginator="true"
-                         paginatorPosition="top"
-                         rows="4"
-                         rowIndexVar="linha"
-                         paginatorTemplate="{CurrentPageReport}  
-                         {FirstPageLink} 
-                         {PreviousPageLink} 
-                         {PageLinks} 
-                         {NextPageLink} 
-                         {LastPageLink} 
-                         {RowsPerPageDropdown}">                
-                <p:column sortBy="#{tarefa.titulo}">
-                    <f:facet name="header">
-                        #{msg.task}
-                    </f:facet>
-                    <h:outputText value="#{tarefa.titulo}"/>
-                </p:column>
-                <p:column sortBy="#{tarefa.slide.titulo}">
-                    <f:facet name="header">
-                        #{msg.slide}
-                    </f:facet>
-                    <h:outputText value="#{tarefa.slide.titulo}"/>
-                </p:column>
-                <p:column sortBy="#{tarefa.papelEnum.toString()}">
-                    <f:facet name="header">
-                        #{msg.paper}
-                    </f:facet>
-                    <h:outputText value="#{tarefa.papelEnum.toString()}"/>
-                </p:column>
-                <p:column>                    
-                    <p:commandButton icon="ui-icon ui-icon-pencil"                              
-                                     title="#{msg.alter}"
-                                     actionListener="#{cadRoteiro.alteraTarefa()}"
-                                     update=":tabUnidadeSlideTarefa:formCadastroTarefas
-                                     :tabUnidadeSlideTarefa:formTabelaTarefas">
-                        <f:setPropertyActionListener value="#{tarefa}"
-                                                     target="#{cadRoteiro.selecTarefa}" />
-                    </p:commandButton>                    
-                    <p:commandButton icon="ui-icon ui-icon-close"                              
-                                     title="#{msg.delete}"
-                                     oncomplete="confirmDeleteTarefa.show()">
-                        <f:setPropertyActionListener value="#{tarefa}" 
-                                                     target="#{cadRoteiro.selecTarefa}" />
-                    </p:commandButton>                   
-                </p:column>
-            </p:dataTable> -->
-        </h:form>  
+          
     </p:dialog>
 
 </ui:composition> 
