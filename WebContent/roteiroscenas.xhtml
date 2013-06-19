@@ -27,10 +27,9 @@
 				<h:outputText value="#{slide.titulo}" />
 			</p:column>
 			<p:column>
-				<p:commandButton id="editScene" icon="ui-icon-pencil"
-					actionListener="#{cadRoteiro.novaTarefa()}"
-					oncomplete="dialogTarefa.show()"
-					>
+				<p:commandButton id="editScene" icon="ui-icon-pencil" oncomplete="dialogTarefa.show()">
+<!-- 					actionListener="#{cadRoteiro.novaTarefa()}" -->
+					
 					<!-- 
 						update=":tabUnidadeSlideTarefa:formCadastroTarefas
                                      :tabUnidadeSlideTarefa:formTabelaTarefas:roteiroTarefas"
@@ -57,7 +56,7 @@
 		<p:commandButton id="addScene" value="#{msg.add}" style="float:right;"
 			actionListener="#{cadRoteiro.novoSlide()}"
 			oncomplete="dialogTarefa.show()"
-			update=":tabUnidadeSlideTarefa:dlgTarefa, :tabUnidadeSlideTarefa:formCadastroTarefas:editorCena">
+			update=":tabUnidadeSlideTarefa:dlgTarefa, :tabUnidadeSlideTarefa:formCadastroTarefas">
 			<!-- 
 						update=":tabUnidadeSlideTarefa:formCadastroTarefas
                                      :tabUnidadeSlideTarefa:formTabelaTarefas:roteiroTarefas"
