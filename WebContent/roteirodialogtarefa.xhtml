@@ -13,13 +13,14 @@
               resizable="false"
               appendToBody="true"
               id="dlgTarefa">
-        <h:panelGrid columns="2">
-        	<h:outputText value="#{msg.project} : "/>
-            <h:outputText value="#{empty cadRoteiro.selecUnidade.projeto.titulo ? '-' : cadRoteiro.selecUnidade.projeto.titulo}"/>
-            <h:outputText value="#{msg.learningUnity} : "/>
-            <h:outputText value="#{empty cadRoteiro.selecUnidade.nome ? '-' : cadRoteiro.selecUnidade.nome}"/>                                
-        </h:panelGrid>
-        <h:form id="formCadastroTarefas"  onsubmit="">
+        <h:form id="formCadastroTarefas">
+	        <h:panelGrid columns="2">
+	        	<h:outputText value="#{msg.project} : "/>
+	            <h:outputText value="#{empty cadRoteiro.selecUnidade.projeto.titulo ? '-' : cadRoteiro.selecUnidade.projeto.titulo}"/>
+	            <h:outputText value="#{msg.learningUnity} : "/>
+	            <h:outputText value="#{empty cadRoteiro.selecUnidade.nome ? '-' : cadRoteiro.selecUnidade.nome}"/>                                
+	        </h:panelGrid>
+        
             <h:panelGrid columns="2">  
 	            <p:tabView>
 		            <p:tab title="#{msg.contents}">
@@ -77,8 +78,7 @@
 		                        <f:validateLength maximum="50"/>
 		                    </p:inputText>
 					</h:panelGrid>
-					<p:editor id="editorCena" widgetVar="editorDoSlide" value="#{cadRoteiro.selecSlide.descricao}" width="400" height="300">
-					</p:editor>
+					<p:editor id="editorCena" widgetVar="editorDoSlide" value="#{cadRoteiro.selecSlide.descricao}" width="400" height="300"/>
 					<h:panelGrid columns="2" style="width:100%;float:left;">
 						<h:outputText value="Cena: " style="align:left;"/>
 						<h:panelGrid columns="2" style="width:100%;float:right">
@@ -88,7 +88,7 @@
 		                                     update=":tabUnidadeSlideTarefa:formTabelaSlides"
 		                                     oncomplete="dialogTarefa.hide()"
 		                                     />
-							<p:commandButton id="cancelAddSlide" style="float:right;" value="#{msg.cancel}" oncomplete="dialogTarefa.hide()" />
+							<p:commandButton id="cancelAddSlide" style="float:right;" value="#{msg.cancel}" oncomplete="dialogTarefa.hide()"/>
 						</h:panelGrid>
 					</h:panelGrid>
 				</h:panelGrid>

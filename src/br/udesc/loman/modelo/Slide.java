@@ -69,4 +69,9 @@ public class Slide implements Serializable, TemGetId{
         this.titulo = titulo;
     }
 
+    @Override
+    public String toString() {
+    	return titulo + " " + descricao;
+    }
+    
 }

@@ -410,7 +410,7 @@ public class CadRoteiro extends CRUDSemPesquisa<Roteiro> {
     }
 
     public Slide getSelecSlide() {
-        this.indexSli = this.registro.getSlides().indexOf(slide);
+    	System.out.println("getSelectSlide " + slide );
         return slide;
     }
 
@@ -420,11 +420,18 @@ public class CadRoteiro extends CRUDSemPesquisa<Roteiro> {
         //atualizarTarefasSlide();
     }
 
-    public void novoSlide() {
+    public void novoSlide()  throws Exception {
+    	System.out.println("novoSlide");
+    	
         this.slide = new Slide();
         alterandoSlide = false;
         slideDesabilitado = true;
+        
+        this.slide.setTitulo("Teste de titulo");
+        this.slide.setDescricao("Teste para o editor");
+        
     }
+    
     /*
     private List<Tarefa> tarefasSlide = new ArrayList<Tarefa>();
 

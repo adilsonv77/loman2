@@ -27,25 +27,15 @@
 				<h:outputText value="#{slide.titulo}" />
 			</p:column>
 			<p:column>
-				<p:commandButton id="editScene" icon="ui-icon-pencil" oncomplete="dialogTarefa.show()">
-<!-- 					actionListener="#{cadRoteiro.novaTarefa()}" -->
+				<p:commandButton id="editScene" icon="ui-icon-pencil" oncomplete="dialogTarefa.show()"
+						update=":tabUnidadeSlideTarefa:formCadastroTarefas">
 					
-					<!-- 
-						update=":tabUnidadeSlideTarefa:formCadastroTarefas
-                                     :tabUnidadeSlideTarefa:formTabelaTarefas:roteiroTarefas"
-                                      -->
 					<f:setPropertyActionListener value="#{slide}"
 						target="#{cadRoteiro.selecSlide}" />
+						
 				</p:commandButton>
 				<p:tooltip for="editScene" value="#{msg.saveTooltip}"/>
-				<!-- 
-					<p:commandButton icon="ui-icon ui-icon-pencil"
-						actionListener="#{cadRoteiro.alteraSlide()}"
-						update=":tabUnidadeSlideTarefa:formCadastroSlide">
-						<f:setPropertyActionListener value="#{slide}"
-							target="#{cadRoteiro.selecSlide}" />
-					</p:commandButton>
-					 -->
+
 				<p:commandButton icon="ui-icon ui-icon-close"
 					oncomplete="confirmDeleteSlide.show()" process="@this">
 					<f:setPropertyActionListener value="#{slide}"
@@ -56,14 +46,8 @@
 		<p:commandButton id="addScene" value="#{msg.add}" style="float:right;"
 			actionListener="#{cadRoteiro.novoSlide()}"
 			oncomplete="dialogTarefa.show()"
-			update=":tabUnidadeSlideTarefa:dlgTarefa, :tabUnidadeSlideTarefa:formCadastroTarefas">
-			<!-- 
-						update=":tabUnidadeSlideTarefa:formCadastroTarefas
-                                     :tabUnidadeSlideTarefa:formTabelaTarefas:roteiroTarefas"
-                                      -->
-			<f:setPropertyActionListener value="#{slide}"
-				target="#{cadRoteiro.selecSlide}" />
-		</p:commandButton>
+			update=":tabUnidadeSlideTarefa:formCadastroTarefas"/>
+
 		<p:tooltip for="addScene" value="#{msg.addSceneTooltip}"/>
 	</h:form>
 
