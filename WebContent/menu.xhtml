@@ -11,7 +11,7 @@
             </p:submenu>
             <p:submenu label="#{msg.projects}">
                 <p:menuitem ajax="false" value="#{msg.registerProjects}" action="#{cadProjeto.novoProjeto}"/> 
-                <p:menuitem ajax="false" value="#{msg.registerScript}" action="#{cadRoteiro.novoRoteiro}" rendered="#{cadUsuario.verificarUsuarioCoordenadorOuProfessorConteudista()}"/>                
+                <p:menuitem ajax="false" value="#{msg.registerScript}" action="#{cadRoteiro.novoRoteiro}" rendered="#{cadUsuario.verificarUsuarioCoordenadorOuProfessorConteudista() || cadUsuario.verificarUsuarioProgramadorOuDesigner()}"/>                
             </p:submenu> 
                        
 <!--             <p:submenu label="#{msg.task}" rendered="#{cadUsuario.verificarUsuarioProgramadorOuDesignerOuCoordenador()}">
